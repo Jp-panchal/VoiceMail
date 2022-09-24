@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <!--one-->
+            <ImageView
+                android:id="@+id/add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:padding="10dp"
+                android:src="@drawable/ic_baseline_person_add" />
+
+            <TextView
+                android:id="@+id/tt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/add"
+                android:padding="10dp"
+                android:text="@string/contact"
+                android:textColor="#78909c"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <!--two-->
+            <ImageView
+                android:id="@+id/contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/add"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:padding="10dp"
+                android:src="@drawable/ic_baseline_phonelink_ring" />
+
+            <TextView
+                android:id="@+id/t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/add"
+                android:layout_toEndOf="@+id/contact"
+                android:padding="10dp"
+                android:text="@string/Add"
+                android:textColor="#78909c"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <!--three-->
+            <ImageView
+                android:id="@+id/sms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/contact"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:padding="10dp"
+                android:src="@drawable/ic_baseline_sms" />
+
+            <TextView
+                android:id="@+id/ttt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/contact"
+                android:layout_toEndOf="@+id/sms"
+                android:padding="10dp"
+                android:text="@string/Send"
+                android:textColor="#78909c"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <!--four-->
+            <ImageView
+                android:id="@+id/copy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sms"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/app_name"
+                android:padding="10dp"
+                android:src="@drawable/ic_baseline_content_copy" />
+
+            <TextView
+                android:id="@+id/tttt"
+                android:onClick="bb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sms"
+                android:layout_toEndOf="@+id/copy"
+                android:padding="10dp"
+                android:text="@string/copy"
+                android:textColor="#78909c"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+        </RelativeLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/editText_main"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_above="@+id/pad"
+        android:layout_alignParentStart="true"
+        android:autofillHints="@string/hint"
+        android:background="#FFFFFF"
+        android:ellipsize="end"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="@string/hint"
+        android:inputType="number"
+        android:lines="1"
+        android:maxLines="1"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="35sp"
+        android:textStyle="normal" />
+
+   <!-- <ImageButton
+        android:id="@+id/back"
+        android:layout_width="65dp"
+        android:layout_height="60dp"
+        android:layout_above="@+id/pad"
+        android:layout_alignParentEnd="true"
+        android:background="#FFF"
+        android:contentDescription="@string/back"
+        android:shadowRadius="10"
+        android:src="@drawable/ic_baseline_backspace" />
+        -->
+    <android.support.v7.widget.CardView
+        android:id="@+id/pad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp">
+
+            <LinearLayout
+                android:id="@+id/one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:focusableInTouchMode="true">
+                    <RelativeLayout
+                        android:id="@+id/num1"
+                        android:onClick="onClick"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/one"
+                            android:textColor="#9c27b0"
+                            android:textSize="30sp"
+                            android:textStyle="normal" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:focusableInTouchMode="true">
+                    <RelativeLayout
+                        android:id="@+id/num2"
+                        android:onClick="onClick"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="normal"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:textColor="#9c27b0"
+                            android:text="@string/two"
+                            android:textSize="30sp"/>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:focusableInTouchMode="true">
+                    <RelativeLayout
+                        android:id="@+id/num3"
+                        android:onClick="onClick"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="normal"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:textColor="#9c27b0"
+                            android:text="@string/three"
+                            android:textSize="30sp"/>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Two"
+                android:layout_below="@+id/one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:focusableInTouchMode="true">
+                    <RelativeLayout
+                        android:id="@+id/num4"
+                        android:onClick="onClick"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="normal"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:textColor="#9c27b0"
+                            android:text="@string/four"
+                            android:textSize="30sp"/>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:focusableInTouchMode="true">
+                    <RelativeLayout
+                        android:id="@+id/num5"
+                        android:onClick="onClick"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="normal"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:textColor="#9c27b0"
+                            android:text="@string/five"
+                            android:textSize="30sp"/>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:focusableInTouchMode="true">
+                    <RelativeLayout
+                        android:id="@+id/num6"
+                        android:onClick="onClick"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="normal"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:textColor="#9c27b0"
+                            android:text="@string/six"
+                            android:textSize="30sp"/>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Three"
+                android:layout_below="@+id/Two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:focusableInTouchMode="true">
+                    <RelativeLayout
+                        android:id="@+id/num77"
+                        android:onClick="onClick"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:ignore="DuplicateIds">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/seven"
+                            android:textColor="#9c27b0"
+                            android:textSize="30sp"
+                            android:textStyle="normal" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:focusableInTouchMode="true">
+                    <RelativeLayout
+                        android:id="@+id/num88"
+                        android:onClick="onClick"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="normal"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:textColor="#9c27b0"
+                            android:text="@string/eight"
+                            android:textSize="30sp"/>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:focusableInTouchMode="true">
+                    <RelativeLayout
+                        android:id="@+id/num99"
+                        android:onClick="onClick"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="normal"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:textColor="#9c27b0"
+                            android:text="@string/nine"
+                            android:textSize="30sp"/>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/four"
+                android:layout_below="@+id/Three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:focusableInTouchMode="true">
+                    <RelativeLayout
+                        android:id="@+id/numAA"
+                        android:onClick="onClick"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/AA"
+                            android:textColor="#9c27b0"
+                            android:textSize="30sp"
+                            android:textStyle="normal" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:focusableInTouchMode="true">
+                    <RelativeLayout
+                        android:id="@+id/num0"
+                        android:onClick="onClick"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/ten"
+                            android:textColor="#9c27b0"
+                            android:textSize="30sp"
+                            android:textStyle="normal" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:focusableInTouchMode="true">
+                    <RelativeLayout
+                        android:id="@+id/numBB"
+                        android:onClick="onClick"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/BB"
+                            android:textColor="#9c27b0"
+                            android:textSize="30sp"
+                            android:textStyle="normal" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+            <!--Dial Pad-->
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/phone_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/four"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:contentDescription="@string/call"
+                android:onClick="callNumber"
+                android:src="@drawable/ic_baseline_call_24">
+
+            </android.support.design.widget.FloatingActionButton>
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="65dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/four"
+                android:layout_margin="20dp"
+                android:layout_alignParentEnd="true"
+                android:background="#FFF"
+                android:contentDescription="@string/back"
+                android:shadowRadius="10"
+                android:src="@drawable/ic_baseline_backspace" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

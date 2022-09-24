@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">My Application</string>
+
+    <!--Note Down this-->
+
+    <string name="show">Show</string>
+    <string name="enter_phone">Enter a phone number</string>
+    <string name="phone_status">"phone status : "</string>
+    <string name="ringing">"RINGING , number : "</string>
+    <string name="offhook">OFFHOOK</string>
+    <string name="idle">IDLE</string>
+    <string name="restarting_app">Restarting app</string>
+    <string name="permission_not_granted">PERMISSION NOT GRANTED!</string>
+    <string name="dial_number">"Phone Status : DIALING:"</string>
+    <string name="failure_permission">Failure to obtain permission!</string>
+    <string name="telephony_enabled">Telephony is enabled</string>
+    <string name="telephony_not_enabled">"TELEPHONY NOT ENABLED! "</string>
+    <string name="call">call</string>
+    <string name="make_a_call">Make a call</string>
+    <string name="phone_disabled">Phone calling disabled</string>
+
+
+    <string name="hint">@null</string>
+    <string name="contact">Create new contact</string>
+    <string name="Add">Add to a contact</string>Send SMS
+    <string name="Send">Send SMS</string>
+    <string name="copy">Copy that number</string>
+    <string name="back">@null</string>
+
+
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="ten">0</string>
+    <string name="AA">*</string>
+    <string name="BB">#</string>
+
+</resources>
